@@ -7,6 +7,15 @@
     <title>geog370hw8</title>
 </head>
 <body>
-    
+    <h1 style="color:darkblue">Homework 8: Geoprocessing Analysis</h1>
+    <a href="./pngs/chicago_food_desert.png">
+        <img src="./pngs/chicago_food_desert.png" alt="Chicago" width="500 px">
+    </a>
+    <p>For my assignment, I tried to assess and answer the question: "To what extent do food deserts exist in the South Side of Chicago?" Chicago historically has an issue with food deserts, or a lack of access to affordable, healthy food in certain communities. I thought that I could map this out by creating one-mile buffers around all of the supermarket locations in the South Side, and assessing what locations are not included in the buffered areas. All data was found from the Chicago Data Portal (linked below).
+        
+    First, I uploaded a vector layer of Chicago Neighborhoods so I could determine which neighborhoods were on the "South Side" (in this I included the Southwest Side, South Side, Far Southwest Side, and Far Southeast side). Then, I uploaded the CSV file of all the supermarket locations in Chicago, and selected the ones in my predetermined area. After exporting the points to the correct EPSG, I was able to create a one-mile buffer around each point. I chose one mile as the radius, because by certain standards, an area qualifies as a "food desert" if 1/3 of the population live more than one mile from a supermarket (in urban areas). Because there was a lot of overlap with the buffers, I then used the geoprocessing method of dissolve to rid of any overlapping lines. In addition, since there were some buffers that exceeded the Chicago city limits, I performed a clip with the buffer as the input and the Chicago vector layer as the overlay, so that the buffered area would not go beyond the boundaries.
+
+Furthermore, I added polygons of the Calumet Lake, Calumet River, and surrounding marshland, to show why that area did not have any supermarkets in that range. In conclusion, there were some areas of the South Side that did not have a supermarket within a one-mile radius, so they could potentially be considered a food desert. However, I believe that furthere criteria may need to be explored, such as demographics, income level, etc., in order to properly classify if the areas are a food desert or not.</p>
+
 </body>
 </html>
